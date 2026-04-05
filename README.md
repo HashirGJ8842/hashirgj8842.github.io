@@ -1,6 +1,6 @@
 # hashirgj8842.github.io
 
-Personal portfolio website for Hashir Hameed Niazi — Software Engineer.
+Personal portfolio website for Hashir Hameed Niazi
 
 ## Live
 
@@ -12,19 +12,6 @@ Personal portfolio website for Hashir Hameed Niazi — Software Engineer.
 - **Once UI** design system
 - **MDX** for project content
 - Static export deployed to GitHub Pages via GitHub Actions
-
-## Local Development
-
-```bash
-npm install
-npm run dev
-```
-
-## Content
-
-- `src/resources/content.tsx` — Personal info, work experience, skills
-- `src/resources/once-ui.config.ts` — Theme, routes, site config
-- `src/app/work/projects/` — Project pages (MDX)
 
 ## License
 
