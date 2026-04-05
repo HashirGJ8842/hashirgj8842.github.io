@@ -1,0 +1,45 @@
+---
+title: "Security & Frontend Modernization"
+publishedAt: "2025-06-01"
+summary: "Led Angular 13 to 17 migration, implemented comprehensive security hardening (CSP, SSL pinning, JWT invalidation), and modernized the build pipeline from Webpack to esbuild."
+images: []
+team:
+  - name: "Hashir Hameed Niazi"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/hashir-hameed"
+---
+
+## Overview
+
+Led the modernization of Telecrm's frontend architecture and implemented comprehensive security hardening across all platforms (web, iOS, Android).
+
+## Frontend Modernization
+
+- **Angular Migration**: Migrated the entire application from Angular 13 to Angular 17, bringing modern features, improved performance, and better developer experience.
+- **Build System Upgrade**: Changed the build script from Webpack to esbuild, drastically improving build times and enabling faster development iteration.
+- **Testing Pipeline Fix**: Fixed the internal testing pipeline after migration, resolving issues that were previously hidden due to slow page rendering speed.
+
+## Security Hardening
+
+- **Content Security Policy**: Added CSP_NONCE support across the application, implementing nonce-based Content Security Policy for stronger XSS protection.
+- **SSL Pinning**: Implemented SSL certificate pinning across all platforms to prevent man-in-the-middle attacks.
+- **Root Detection**: Added root/jailbreak detection on mobile platforms to protect against tampered devices.
+- **HTTP Restriction**: Disallowed plain HTTP requests across all applications, enforcing HTTPS-only communication.
+- **JWT Invalidation**: Implemented JWT token invalidation on logout using Redis, ensuring tokens cannot be reused after logout. Chose Redis over Firebase servers due to cost considerations.
+- **Permission Audit Logs**: Added updation logs when users change permissions, tracking who changed what and what permissions were granted/revoked. Also added WebSocket support for real-time permission updates to affected users.
+
+## Technologies Used
+
+- **Angular 17**: Modern frontend framework
+- **esbuild**: Fast JavaScript bundler
+- **Redis**: JWT invalidation store
+- **WebSockets**: Real-time permission updates
+- **Content Security Policy**: Web security standard
+
+## Impact
+
+- Improved build performance and developer experience
+- Significantly reduced security vulnerabilities across all platforms
+- Ensured secure token lifecycle management
+- Added audit trail for permission changes

@@ -1,0 +1,48 @@
+---
+title: "Mobile App Engineering"
+publishedAt: "2025-12-15"
+summary: "Cross-platform mobile development including push notifications, deeplinks, state restoration, virtual scrolling, and critical Android/iOS fixes — shipping production features across both platforms."
+images: []
+team:
+  - name: "Hashir Hameed Niazi"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/hashir-hameed"
+---
+
+## Overview
+
+Owned mobile engineering at Telecrm, building and shipping critical features across Android and iOS platforms while solving complex platform-specific challenges.
+
+## Key Features
+
+- **Push Notifications**: Added Android and iOS push notification capabilities, improving user engagement and real-time communication.
+- **iOS Deeplinks**: Implemented deeplinks so that routing to URLs opens the iOS application directly.
+- **Click-to-Call Enhancement**: Improved web-to-mobile click-to-call via a new native websocket layer. Previously required the app to be open — solved with native websockets that work in the background.
+- **Virtual Scrolling**: Introduced virtual scrolls on all paginated views, solving exponential memory consumption from DOM element accumulation that caused severe performance degradation.
+- **State Restoration (Android 14+)**: Solved LMDK daemon issues where Android 14+ would kill the app when navigating to external services (camera, WhatsApp, calling). Built a state restoration service, in-app camera, and system-wide custom back button to maintain state.
+- **Notch Fixes**: Fixed display issues from Android 14+ and iOS notch devices.
+- **ANR Resolution**: Fixed Application Not Responding issues caused by excessive main thread activity by properly utilizing background threads.
+- **Capacitor Migration**: Upgraded Capacitor from v5 to v7 for better platform support.
+- **Web Push Notifications**: Improved reliability of web push notifications.
+
+## Key Bug Fixes
+
+- **Android LMDK Issues**: App depended on external services which, when navigated to on Android 14+, would cause premature app kills and restarts from the beginning instead of the previous state.
+- **ANR Issues**: The Android app was repeatedly triggering ANRs because too much activity was happening on the main thread.
+- **Notch Display Issues**: Fixed layout and display issues on devices with notches across both platforms.
+
+## Technologies Used
+
+- **Angular / Capacitor**: Cross-platform mobile framework
+- **WebSockets / Native WebSockets**: Real-time mobile communication
+- **Android SDK**: Platform-specific features
+- **iOS SDK**: Deeplinks and push notifications
+- **Sentry**: Error tracking and monitoring
+
+## Impact
+
+- Improved app stability and user experience across Android and iOS
+- Resolved critical crashes affecting Android 14+ users
+- Enhanced real-time communication capabilities
+- Improved scrolling performance on paginated views

@@ -1,0 +1,44 @@
+---
+title: "WhatsApp Cloud API Platform"
+publishedAt: "2024-01-15"
+summary: "End-to-end WhatsApp Cloud API platform with messaging automation, conversation analytics, interactive messaging, campaign management, and embedded signup — built for a high-growth CRM serving 100K+ leads."
+images: []
+team:
+  - name: "Hashir Hameed Niazi"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/hashir-hameed"
+---
+
+## Overview
+
+Owned end-to-end development of a full-stack WhatsApp Cloud API platform at Telecrm, enabling businesses to communicate with their leads at scale through WhatsApp. The platform supports one-on-one messaging, bulk campaigns, interactive messages, and automation workflows.
+
+## Key Features
+
+- **Interactive Messaging**: Implemented WhatsApp Cloud API interactive messages including WhatsApp Lists, allowing users to send, view, and update interactive content through one-on-one messaging or automations.
+- **Conversation Analytics**: Built a comprehensive analytics dashboard where users can view sent messages, cost incurred, and categorical representation of message types sent.
+- **Real-time Chat UI**: Developed the WhatsApp messaging interface supporting text, audio, video, document-based messages, and interactive messages. Built a rich text editor with bold, italic, strikethrough support, template-based shortcuts, and drag-drop media upload with captions.
+- **Campaign Dashboard**: Created a bulk messaging campaign system capable of sending to 100K+ leads (scaled from 5K), with delivery stats, error code breakdowns, scheduled retries with undo capability, and granular tracking of sent/delivered/read metrics.
+- **Template Management**: Built a template selector modal with filtering by language and category, along with full template creation, updation, and management UI.
+- **Contact Filtering**: Added the ability to filter WhatsApp contacts by lead assignee, status, unread chats, and search by name or phone number.
+- **Embedded Signup**: Built WhatsApp Cloud API embedded signup flow for direct user onboarding.
+- **OTP Integration**: Created WhatsApp OTP integrations enabling users to send OTP to leads via WhatsApp Cloud API.
+- **Location Messages**: Added support for sending location messages through the WhatsApp UI.
+- **Permissions System**: Implemented granular permissions for WhatsApp-based features.
+- **Mobile App**: Implemented all WhatsApp features for the mobile application as well.
+
+## Technologies Used
+
+- **Node.js / Express.js**: Backend API and webhook processing
+- **Angular**: Frontend application and chat UI
+- **MongoDB / Atlas Search**: Lead data storage and search
+- **Redis**: Caching layer for chat performance optimization
+- **AWS (SQS, SNS, Lambda, EC2)**: Queue processing and infrastructure
+- **WebSockets**: Real-time message delivery
+
+## Impact
+
+- Scaled broadcast capacity from 5,000 to 100,000 leads (20x improvement)
+- Reduced chat load times through multi-layer caching
+- Enabled businesses to manage all WhatsApp communications from a single CRM interface

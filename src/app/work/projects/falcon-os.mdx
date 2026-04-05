@@ -1,0 +1,34 @@
+---
+title: "FalconOS"
+publishedAt: "2022-08-10"
+summary: "A custom x86 operating system kernel built from scratch with C++ and x86 Assembly, featuring GRUB bootloader, interrupt handling, memory management, and cooperative multitasking."
+images: []
+team:
+  - name: "Hashir Hameed Niazi"
+    role: "Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/hashir-hameed"
+---
+
+## Overview
+
+Built a custom x86 operating system kernel from scratch as a deep dive into systems programming, CPU architecture, and low-level hardware interaction. The kernel boots directly on bare metal using GRUB and implements fundamental OS concepts.
+
+## Key Features
+
+- **GRUB Bootloader**: Implemented a GRUB-based bootloader that initializes the system and transfers control to the kernel, enabling the OS to boot on any x86-compatible hardware.
+- **Interrupt Handling (IDT)**: Designed and implemented the Interrupt Descriptor Table for handling hardware and software interrupts, including keyboard input and timer interrupts.
+- **Memory Management**: Built basic memory management subsystems for kernel-level memory allocation and page management.
+- **Cooperative Multitasking**: Implemented cooperative multitasking with context switching between kernel processes, allowing multiple tasks to share CPU time.
+- **Hardware Interaction**: Low-level hardware interaction using x86 Assembly for direct CPU communication, port I/O, and register manipulation.
+
+## Technologies Used
+
+- **C++**: Kernel logic and higher-level system code
+- **x86 Assembly**: Low-level hardware interaction, boot sequence, and interrupt handlers
+- **GRUB**: Bootloader for system initialization
+- **Make**: Build system for compiling and linking the kernel
+
+## Learnings
+
+This project provided hands-on experience with CPU interrupts, context switching, kernel architecture, memory management, and the fundamentals of how operating systems work at the lowest level. Building an OS from scratch gives a perspective on systems that's impossible to get any other way.

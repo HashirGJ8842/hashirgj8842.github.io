@@ -1,0 +1,38 @@
+---
+title: "CI/CD & Build Automation"
+publishedAt: "2023-09-20"
+summary: "Designed automated deployment pipelines, parallelized CI builds (60 min to 10 min), and created OS-agnostic build scripts — reducing release cycles from 2 weeks to 2 days."
+images: []
+team:
+  - name: "Hashir Hameed Niazi"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/hashir-hameed"
+---
+
+## Overview
+
+Led CI/CD and developer productivity improvements at Telecrm, transforming the deployment process from manual, error-prone releases to fully automated pipelines.
+
+## Key Features
+
+- **Bitbucket Pipelines**: Implemented automated CI/CD pipelines to build, test, and deploy to AWS using AWS CLI and Bitbucket SDKs. Every commit now triggers automated builds and deployments.
+- **Build Automation**: Created OS-agnostic build scripts (`build.sh`) that automate building the entire project and starting each server with a single command. Previously, each developer manually built each part of the project — this has been fully automated.
+- **Pipeline Parallelization**: Parallelized the build pipeline, effectively dropping build minutes from 60 minutes to 10 minutes, significantly improving developer feedback loops.
+- **Angular Migration Build Fixes**: Fixed the internal testing pipeline after migrating from Angular 13 to 17 and Webpack to esbuild, resolving issues that were hidden due to previously slow page rendering.
+- **Pre-initialize Hooks**: Added version validation hooks throughout the application — the app checks whether the version to be served is valid, and hard refreshes if not. On Android, it prompts users to update through the Google Play Store.
+
+## Technologies Used
+
+- **Bitbucket Pipelines**: CI/CD automation
+- **AWS CLI / SDK**: Automated cloud deployments
+- **Shell Scripting (Bash)**: Cross-platform build automation
+- **Docker**: Containerized builds
+- **esbuild**: Fast frontend bundling
+
+## Impact
+
+- Reduced production release cycles from 2 weeks to 2 days
+- Cut build times by 83% (60 min to 10 min)
+- Eliminated manual build steps for developers
+- Improved release reliability and consistency

@@ -1,0 +1,55 @@
+---
+title: "Performance & Infrastructure Optimization"
+publishedAt: "2026-02-01"
+summary: "Multi-layer caching, query optimization, AWS cost reduction, and critical production bug fixes — improving system performance, reliability, and cost efficiency across the entire platform."
+images: []
+team:
+  - name: "Hashir Hameed Niazi"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/hashir-hameed"
+---
+
+## Overview
+
+Led multiple performance optimization and infrastructure improvement initiatives at Telecrm, tackling latency issues, cost reduction, and production reliability across the full stack.
+
+## Key Achievements
+
+### Multi-Layer Caching
+- Introduced RAM Cache for server-side caching, reducing network latency by serving cached resources directly from the server instead of making Redis network calls.
+- Added caching layers to decrease WhatsApp chat section load times.
+- Implemented local media caching in the frontend and added CloudFront ahead of S3 for lower data transfer costs.
+
+### Query Optimization
+- Built an EntityFilterGroup system that auto-generates MongoDB and Atlas Search queries from specified filter parameters, eliminating manual query construction.
+- Optimized resource fetching (custom fields, custom actions, enterprise data) to only fetch required details instead of entire documents, reducing MongoDB, Redis, and data transfer costs.
+- Migrated WhatsApp view lead fetching from MongoDB to Atlas Search for better performance.
+
+### Critical Bug Fixes
+- **Redis Latency Bug**: Fixed a critical Redis latency issue that took down production servers during a large client onboarding. Diagnosed and resolved independently.
+- **MongoDB Atlas Search Health**: Solved atlas search index health issues caused by large objects, by trimming them into spam details.
+- **WebSocket FD Limit**: Fixed AWS WebSocket API Gateway hitting file descriptor limits, breaking click-to-call functionality. Used AWS API to close stale connections.
+- **Replication Lag**: Fixed broadcast and bulk edit failures caused by replication lag between MongoDB clusters — also resolved count mismatches in the analytics database and duplicate lead issues.
+- **SNS Issue**: Completely solved SNS issues caused by large objects in the database, reducing costs.
+- **Infinite Loop**: Inspected and resolved a salesform/workflows issue causing infinite loops in production servers.
+
+### AWS Migration & Cost Reduction
+- Migrated AWS SDK from v2 to v3 across the entire project (API Gateway, Lambda, SNS, SQS, EC2).
+- Added CloudFront CDN ahead of S3, lowering data transfer costs by $35/month.
+- Implemented a pending promises queue to offload non-critical actions to background execution.
+
+## Technologies Used
+
+- **Node.js**: Server-side caching and optimization
+- **MongoDB / Atlas Search**: Database queries and search
+- **Redis**: Caching layer
+- **AWS (EC2, S3, CloudFront, SQS, SNS, Lambda, API Gateway)**: Cloud infrastructure
+- **WebSockets**: Real-time communication
+
+## Impact
+
+- Significantly reduced API response times and database load
+- Lowered AWS costs by $35/month through infrastructure optimization
+- Resolved critical production outages affecting all users
+- Improved overall system reliability and observability
